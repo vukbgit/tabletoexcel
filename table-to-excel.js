@@ -23,10 +23,7 @@
         checkIsMac: navigator.userAgent.indexOf("Mac") != -1,
         /**
          *入口
-         *@param {String} param 页面内table的id属性值
-         *or
-         *@param {Array} param 接口传过来的二维数组
-         *@param {String} title 第一行的title
+         *@param {String} table 页面内table的id属性值  不传值则从一个二维数组里生成table
          */
         render: function(param, title) {
             if (this.checkIsIE) {
@@ -55,7 +52,7 @@
                 var hdLen = title.length;
                 for (var n = 0; n < hdLen; n++) {
                     var border = n % 2 != 0 ? "border-top:1px solid #fff;" : "";
-                    trArr.push('<tr><td style="background:#ddd; color:#fff;" colspan="' + param[0].length + '">' + title[n][0] + '</td></tr>');
+                    trArr.push('<tr><td style="background:'+title[n].bg+'; color:'+title[n].color+';" colspan="' + param[0].length + '">' + title[n].text + '</td></tr>');
                 }
             }
             for (var i = 0; i < trLen; i++) {
@@ -71,6 +68,9 @@
         },
         /**
          *根据页面内存在的table生成excel   非IE浏览器
+         *@param {String} param 页面内table的id属性值
+         *or
+         *@param {Array} param 接口传过来的二维数组
          */
         createExcel: function(param, title) {
             var self = this;
@@ -107,6 +107,9 @@
         },
         /**
          *根据页面内存在的table生成excel   IE浏览器
+         *@param {String} param 页面内table的id属性值
+         *or
+         *@param {Array} param 接口传过来的二维数组
          */
         createExcelIE: function(param, title) {
             var tableHtml = null;
