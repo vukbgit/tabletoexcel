@@ -1,5 +1,5 @@
 # tabletoexcel
-create excel by javascript
+create excel by javascript for table or json
 
 
 
