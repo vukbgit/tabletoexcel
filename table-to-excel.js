@@ -127,5 +127,16 @@
             objWorksheet.Paste;
         }
     }
-
+    // AMD && CMD
+    if (typeof define === 'function') {
+        define(function() {
+            return TableToExcel;
+        });
+        // CommonJS
+    } else if (typeof module !== "undefined" && module !== null) {
+        module.exports = TableToExcel;
+        // window
+    } else {
+        window.TableToExcel = TableToExcel;
+    }
 })();

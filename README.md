@@ -9,6 +9,7 @@ create excel by javascript for table or json
 
 ###Use
 ```bash
+<script src='table-to-excel.js'></script>
 var tableToExcel=new TableToExcel();
 document.getElementById('button1').onclick=function(){
 	
@@ -23,6 +24,11 @@ document.getElementById('button2').onclick=function(){
 	]
 	tableToExcel.render(arr,[{text:"create",bg:"#000",color:"#fff"},{text:"createcreate",bg:"#ddd",color:"#fff"}]);
 };
+-------------------------or---------------------------
+var TableToExcel = require('table-to-excel');
+var tableToExcel=new TableToExcel();
+.....
+
 ```
 	
 
