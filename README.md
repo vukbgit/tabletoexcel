@@ -50,7 +50,6 @@ document.getElementById('button2').onclick=function(){
 ```bash
 var TableToExcel = require('table-to-excel');
 var tableToExcel=new TableToExcel();
-var tableToExcel=new TableToExcel();
 document.getElementById('button1').onclick=function(){
 	
 	tableToExcel.render("table");
