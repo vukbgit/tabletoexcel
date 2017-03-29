@@ -3,12 +3,13 @@ create excel by javascript for table or json
 
 
 
-###Install
+## Install
 
     $ npm install table-to-excel
 
-###Use
+## Use
 ```bash
+1、
 <script src='table-to-excel.js'></script>
 var tableToExcel=new TableToExcel();
 document.getElementById('button1').onclick=function(){
@@ -17,19 +18,22 @@ document.getElementById('button1').onclick=function(){
 	
 };
 document.getElementById('button2').onclick=function(){
-	var arr=[
-		['LastName','Sales','Country','Quarter'],
-		['Smith','1675323242在34234','UK','Qtr 3'],
-		['Johnson','14808','USA','Qtr 4']
+	var arr = [
+		['Name', 'Age', 'Sex', 'Country'],
+		['ecofe', '18', 'male', 'china'],
+		['alice', '3', 'female', 'china']
 	]
-	tableToExcel.render(arr,[{text:"create",bg:"#000",color:"#fff"},{text:"createcreate",bg:"#ddd",color:"#fff"}]);
+	tableToExcel.render(arr,[{text:"title1",bg:"#333",color:"#fff"},{text:"title2",bg:"#ddd",color:"#333"}]);
 };
--------------------------or---------------------------
+
+2、
 var TableToExcel = require('table-to-excel');
 var tableToExcel=new TableToExcel();
 .....
 
 ```
-	
+
+
+
 
 [github](https://github.com/ecofe/tabletoexcel)
