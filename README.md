@@ -1,6 +1,6 @@
 # tabletoexcel
 create excel by javascript for table or json
-
+modifice by vuk
 
 
 ## Install
